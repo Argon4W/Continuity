@@ -1,0 +1,34 @@
+modLoader = "javafml"
+loaderVersion = "*"
+license = "LGPL-3.0-only"
+issueTrackerURL = "https://github.com/PepperCode1/Continuity/issues"
+
+[properties]
+"connector:placeholder" = true
+
+[[mods]]
+modId = "continuity"
+version = "${version}"
+displayName = "Continuity"
+description = "Continuity is a Fabric mod that allows resource packs that use the OptiFine connected textures format, OptiFine emissive textures format (only for blocks and item models), or OptiFine custom block layers format to work without OptiFine."
+logoFile = "assets/continuity/icon.png"
+logoBlur = false
+authors = "PepperCode1"
+displayURL = "https://modrinth.com/mod/continuity"
+displayTest = "IGNORE_ALL_VERSION"
+
+[[dependencies.continuity]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1]"
+side = "CLIENT"
+
+[[dependencies.continuity]]
+modId = "connectormod"
+mandatory = true
+side = "CLIENT"
+
+[[dependencies.continuity]]
+modId = "fabric_api"
+mandatory = true
+side = "CLIENT"
