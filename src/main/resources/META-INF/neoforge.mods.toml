@@ -1,13 +1,13 @@
 modLoader = "javafml"
 loaderVersion = "${loader_version_range}"
 license = "${mod_license}"
-issueTrackerURL = "https://github.com/PepperCode1/Continuity/issues"
+issueTrackerURL = "https://github.com/teaconmc/NeoContinuity"
 
 [[mods]]
     modId = "${mod_id}"
     version = "${mod_version}"
     displayName = "${mod_name}"
-    description = "Continuity is a Fabric mod that allows resource packs that use the OptiFine connected textures format, OptiFine emissive textures format (only for blocks and item models), or OptiFine custom block layers format to work without OptiFine."
+    description = """NeoContinuity is an unofficial fork of Continuity, aiming to run Continuity natively on NeoForge and reduce some of the redundant FFAPI dependencies using NeoForge API. Do not report issues encountered with this mod to the original.\n\nContinuity is a Fabric mod that allows resource packs that use the OptiFine connected textures format, OptiFine emissive textures format (only for blocks and item models), or OptiFine custom block layers format to work without OptiFine."""
     logoFile = "assets/continuity/icon.png"
     logoBlur = false
     authors = "${mod_authors}"

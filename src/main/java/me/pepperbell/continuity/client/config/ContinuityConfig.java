@@ -26,7 +26,9 @@ public class ContinuityConfig {
 	protected static final Logger LOGGER = LoggerFactory.getLogger("Continuity Config");
 	protected static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
-	public static final ContinuityConfig INSTANCE = new ContinuityConfig(FMLPaths.CONFIGDIR.get().resolve("continuity.json").toFile());
+	//Partially remove fabric-loader dependency. (fabric-renderer-indigo still bounds to fabric-loader)
+	public static final ContinuityConfig INSTANCE = new ContinuityConfig(/*FabricLoader.getInstance().getConfigDir()*/ FMLPaths.CONFIGDIR.get().resolve("continuity.json").toFile());
+
 	static {
 		INSTANCE.load();
 	}

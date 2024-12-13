@@ -58,7 +58,7 @@ public final class ProcessingDataKeyRegistryImpl implements ProcessingDataKeyReg
 	}
 
 	/*public void init() {
-		ClientLifecycleEvents.CLIENT_STARTED.register(client -> );
+		ClientLifecycleEvents.CLIENT_STARTED.register(client -> frozen = true);
 	}*/
 
 	public List<ProcessingDataKey<?>> getAllResettable() {

@@ -6,6 +6,7 @@ import me.pepperbell.continuity.client.config.ContinuityConfigScreen;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import org.slf4j.Logger;
 
@@ -42,9 +43,6 @@ import me.pepperbell.continuity.client.properties.overlay.OrientedConnectingOver
 import me.pepperbell.continuity.client.properties.overlay.RandomOverlayCtmProperties;
 import me.pepperbell.continuity.client.properties.overlay.RepeatOverlayCtmProperties;
 import me.pepperbell.continuity.client.properties.overlay.StandardOverlayCtmProperties;
-import me.pepperbell.continuity.client.resource.ModelWrappingHandler;
-import me.pepperbell.continuity.client.util.biome.BiomeHolderManager;
-import me.pepperbell.continuity.impl.client.ProcessingDataKeyRegistryImpl;
 import net.minecraft.resources.ResourceLocation;
 
 @Mod(ContinuityClient.ID)
@@ -56,6 +54,10 @@ public class ContinuityClient /*implements ClientModInitializer*/ {
 	public static final Logger LOGGER = LogUtils.getLogger();
 
 	public ContinuityClient(IEventBus modEventBus, ModContainer modContainer) {
+		if (!FMLEnvironment.dist.isClient()) {
+			return;
+		}
+
 		//ProcessingDataKeyRegistryImpl.INSTANCE.init();
 		//BiomeHolderManager.init();
 		ProcessingDataKeys.init();

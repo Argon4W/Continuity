@@ -85,6 +85,7 @@ public class BaseProcessingPredicate implements ProcessingPredicate {
 		@Nullable
 		public Biome get(BlockAndTintGetter blockView, BlockPos pos) {
 			if (invalid) {
+				/*Remove redundant fabric-block-view-api-v2 dependency.*/
 				biome = ((BlockAndTintGetterExtension) blockView).continuity$hasBiome() ? ((BlockAndTintGetterExtension) blockView).continuity$getBiome(pos).value() : null;
 				invalid = false;
 			}
